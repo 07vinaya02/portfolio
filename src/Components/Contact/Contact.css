@@ -1,0 +1,80 @@
+.contact {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: -10pxpx;
+}
+
+.contact-title h1 {
+  font-size: 2rem;
+  margin-bottom: 70px;
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-left {
+  width: 45%;
+  text-align: left;
+}
+.contact-left h2 {
+  font-size: 40px;
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.contact-detail p {
+  font-size: 1rem;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-detail p svg {
+  margin-right: 8px; /* Adjust the spacing as needed */
+}
+
+.contact-right {
+  width: 50%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.contact-form button {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin: 15px 0;
+}
+.contact-form button:hover {
+  border: 2px solid white;
+}
