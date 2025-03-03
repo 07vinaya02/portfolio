@@ -2,8 +2,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 170px;
+  padding: 15px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 1000;
+  height: 30px;
 }
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -12,14 +21,29 @@
   font-size: 20px;
   cursor: pointer;
 }
+
 .nav-connect {
-  padding: 20px 40px;
+  padding: 15px 35px;
   border-radius: 50px;
   background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
   font-size: 22px;
   cursor: pointer;
   transition: 0.5s;
+  color: white;
 }
+
 .nav-connect:hover {
   transform: scale(1.05);
+}
+
+.nav-menu p {
+  font-size: 20px;
+  cursor: pointer;
+  color: #b923e1;
+  text-decoration: none;
+}
+
+/* Ensure navbar stays on top of content */
+body {
+  padding-top: 80px; /* Adjust based on navbar height */
 }

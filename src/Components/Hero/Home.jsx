@@ -1,8 +1,8 @@
 // import React from 'react'
 import "./Hero.css";
-const Hero = () => {
+const Home = () => {
   return (
-    <div className="hero">
+    <div href="home" className="hero">
       <img src="https://th.bing.com/th/id/OIP.9z2otRrrhtqNmr2ny-FivwHaLG?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7" />
       <h1>
         <span>I am Vinaya K ,</span>frontend developer in India.
@@ -15,4 +15,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
