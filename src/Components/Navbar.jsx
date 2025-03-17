@@ -1,36 +1,70 @@
 import { useState } from "react";
 import "./Navbar.css";
-import { Link } from "@mui/material";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import MenuOpenIcon from "@mui/icons-material/MenuOpen";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
 
   return (
     <div className="navbar">
-      {/* <img src=" " alt="Logo" className="logo" /> */}
-      <ul className="nav-menu">
+      {/* Hamburger Icon (Shows only on Mobile) */}
+      <div className="nav-open" onClick={() => setIsMenuOpen(true)}>
+        <MenuOpenIcon className="open" />
+      </div>
+
+      {/* Navigation Menu */}
+      <ul className={`nav-menu ${isMenuOpen ? "open" : ""}`}>
+        {/* Close Icon Inside Menu */}
+        <div className="nav-close" onClick={() => setIsMenuOpen(false)}>
+          <CloseIcon className="close" />
+        </div>
+
         <li>
-          <Link underline="none" href="#home">
-            <p onClick={() => setMenu("home")}>Home</p>
-          </Link>
+          <AnchorLink
+            className="anchor-link"
+            href="#home"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </AnchorLink>
         </li>
         <li>
-          <Link underline="none" href="#about">
-            <p onClick={() => setMenu("about")}>About</p>
-          </Link>
+          <AnchorLink
+            className="anchor-link"
+            href="#about"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </AnchorLink>
         </li>
         <li>
-          <Link underline="none" href="#portfolio">
-            <p onClick={() => setMenu("portfolio")}>Portfolio</p>
-          </Link>
+          <AnchorLink
+            className="anchor-link"
+            href="#portfolio"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Portfolio
+          </AnchorLink>
         </li>
         <li>
-          <Link href="#contact" underline="none">
-            <p onClick={() => setMenu("contact")}>Contact</p>
-          </Link>
+          <AnchorLink
+            className="anchor-link"
+            href="#contact"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </AnchorLink>
         </li>
       </ul>
-      <div className="nav-connect">Connect With Me</div>
+
+      {/* Connect With Me Section (Hidden on Mobile) */}
+      <div className="nav-connect">
+        <AnchorLink className="anchor-link" href="#contact">
+          Connect With Me
+        </AnchorLink>
+      </div>
     </div>
   );
 };
