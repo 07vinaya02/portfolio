@@ -78,3 +78,24 @@
 .contact-form button:hover {
   border: 2px solid white;
 }
+@media (max-width: 768px) {
+  .contact {
+    padding: 10px 0px;
+  }
+  .contact-title h1 {
+    font-size: 80px;
+    font-weight: 600;
+  }
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 40px 150px;
+  }
+  .contact-left {
+    width: 100%;
+  }
+  .contact-right {
+    width: 100%;
+  }
+}

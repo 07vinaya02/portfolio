@@ -5,11 +5,11 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Track menu state
 
   return (
     <div className="navbar">
-      {/* Hamburger Icon (Shows only on Mobile) */}
+      {/* Hamburger Icon (Visible only on mobile) */}
       <div className="nav-open" onClick={() => setIsMenuOpen(true)}>
         <MenuOpenIcon className="open" />
       </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Connect With Me Section (Hidden on Mobile) */}
+      {/* "Connect With Me" Button (Hidden on Mobile) */}
       <div className="nav-connect">
         <AnchorLink className="anchor-link" href="#contact">
           Connect With Me

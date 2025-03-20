@@ -1,3 +1,4 @@
+/* ✅ Desktop Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -10,9 +11,10 @@
   background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Blur effect */
   z-index: 1000;
-  height: 30px;
+  height: 60px;
 }
 
+/* ✅ Desktop Menu (Visible) */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -22,6 +24,7 @@
   cursor: pointer;
 }
 
+/* ✅ "Connect With Me" Button (Desktop Only) */
 .nav-connect {
   margin-left: 10px;
   margin-right: 140px;
@@ -45,61 +48,69 @@
   text-decoration: none;
 }
 
-body {
-  padding-top: 80px;
-}
 .anchor-link {
   text-decoration: none;
   color: white;
 }
-.nav-close {
-  display: none;
-}
+
+/* 🔹 Hide Close Icon & Hamburger Icon on Desktop */
+.nav-close,
 .nav-open {
   display: none;
 }
+
+/* ✅ Mobile Styles (<= 768px) */
 @media (max-width: 768px) {
   .navbar {
-    margin: 20px 50px;
+    padding: 10px 20px;
   }
+
+  /* 🔹 Hide "Connect With Me" Button on Mobile */
   .nav-connect {
     display: none;
   }
+
+  /* 🔹 Show Hamburger Icon */
   .nav-open {
     display: block;
-    /* position: fixed; */
-    right: 30px;
     font-size: 30px;
     color: white;
     cursor: pointer;
+    position: fixed;
+    top: 20pxpx;
+    z-index: 1001;
   }
-  .nav-close {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
+
+  /* 🔹 Hide Menu by Default (Slide-in from Left) */
   .nav-menu {
     position: fixed;
+    top: -130px;
+    left: -50%;
+    width: 20%;
+    height: 100vh;
+    background: black;
+    display: flex;
     flex-direction: column;
-    align-items: start;
-    top: 0%;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
-    background-color: black;
-    width: 350px;
-    height: 100%;
-    z-index: 2;
-    transition: right 0.5s;
-    right: -350px;
-    padding-top: 50px;
+    transition: left 0.5s ease-in-out;
+    z-index: 1000;
   }
-  .nav-menu li {
+
+  /* 🔹 Show Menu When Open */
+  .nav-menu.open {
+    left: 0;
+  }
+
+  /* 🔹 Show Close Icon (Inside Menu) */
+  .nav-close {
+    display: block;
     font-size: 30px;
-    padding-left: 100px;
-    flex-direction: row;
-    gap: 20px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    right: 20px;
   }
 }

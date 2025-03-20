@@ -6,9 +6,9 @@
 }
 .hero img {
   margin-top: 150px;
-  width: 20%;
-  /* height: 10%; */
-  border-radius: 50%;
+  width: 10%;
+
+  border-radius: 30%;
 }
 .hero h1 {
   text-align: center;
@@ -47,4 +47,23 @@
 }
 .hero-resume:hover {
   border-color: #b415ff;
+}
+@media (max-width: 768px) {
+  .hero img {
+    margin-top: 50px;
+    width: 20%;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero-action {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-connect {
+    padding: 15px 25px;
+  }
+  .hero-resume {
+    padding: 15px 35px;
+  }
 }

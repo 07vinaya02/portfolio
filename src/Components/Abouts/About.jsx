@@ -1,5 +1,7 @@
 // import React from "react";
 import "./About.css";
+import myimg from "../../assets/img.jpg";
+
 const About = () => {
   return (
     <div id="about" className="about">
@@ -9,7 +11,7 @@ const About = () => {
       </div>
       <div className="about-sections">
         <div className="about-left">
-          <img src="https://th.bing.com/th/id/OIP.9z2otRrrhtqNmr2ny-FivwHaLG?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7" />
+          <img src={myimg} />
         </div>
         <div className="about-right">
           <div className="about-para">

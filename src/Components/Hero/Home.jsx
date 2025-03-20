@@ -1,9 +1,10 @@
 // import React from 'react'
 import "./Hero.css";
+import myimg from "../../assets/img.jpg";
 const Home = () => {
   return (
     <div id="home" className="hero">
-      <img src="https://th.bing.com/th/id/OIP.9z2otRrrhtqNmr2ny-FivwHaLG?w=186&h=279&c=7&r=0&o=5&dpr=1.5&pid=1.7" />
+      <img src={myimg} />
       <h1>
         <span>I am Vinaya K ,</span>frontend developer in India.
       </h1>
