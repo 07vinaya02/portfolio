@@ -2,16 +2,17 @@
 import "./MyWork.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import mywork_data from "../../assets/mywork_data";
+
 const MyWork = () => {
   return (
     <div id="portfolio" className="mywork">
       <div className="mywork-title">
         <h1>My latest work</h1>
-        <img src="../../assets/mywork_data.js" />
+        {/* <img src="../../assets/mywork_data.js" /> */}
       </div>
       <div className="mywork-container">
-        {mywork_data.map((work, index) => {
-          return <img key={index} src="{work.w_img" />;
+        {mywork_data.map((works, index) => {
+          return <img key={index} src={works.w_img} className="workimg" />;
         })}
       </div>
       <div className="mywork-showmore">

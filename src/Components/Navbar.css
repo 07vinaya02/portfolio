@@ -8,8 +8,8 @@
   top: 0;
   left: 0;
   width: 100vw;
-  background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Blur effect */
+  background: rgba(19, 18, 18, 0.8); /* Semi-transparent background */
+  backdrop-filter: blur(50%); /* Blur effect */
   z-index: 1000;
   height: 60px;
 }
